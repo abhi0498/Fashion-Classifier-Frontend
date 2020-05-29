@@ -46,10 +46,6 @@
         </v-tab-item>
       </v-tabs>
       <v-img max-height="500px" max-width="500px" contain v-bind:src="src" alt></v-img>
-
-      <div>
-        <p v-for="(a,i) in result" :key="i+a">{{a}}</p>
-      </div>
     </v-card>
     <div v-if="products.Amazon">
       <Products title="Amazon" :products="products.Amazon"></Products>
