@@ -12,36 +12,17 @@
     </v-container>
 
     <v-row align="center" v-if="isLoading">
-      <h1>Amazon</h1>
-
       <v-row style="width:80%">
-        <v-col v-for="i in Array.from({length:10})" :key="i" cols="3">
-          <v-skeleton-loader class="mx-auto" max-width="300" type="card"></v-skeleton-loader>
-        </v-col>
-      </v-row>
-
-      <h1>Flipkart</h1>
-
-      <v-row style="width:100%">
-        <v-col v-for="i in Array.from({length:10})" :key="i" cols="3">
-          <v-skeleton-loader class="mx-auto" max-width="300" type="card"></v-skeleton-loader>
-        </v-col>
-      </v-row>
-
-      <h1>Myntra</h1>
-
-      <v-row style="width:100%">
-        <v-col v-for="i in Array.from({length:10})" :key="i" cols="3">
+        <v-col v-for="i in Array.from({length:20})" :key="i" cols="3">
           <v-skeleton-loader class="mx-auto" max-width="300" type="card"></v-skeleton-loader>
         </v-col>
       </v-row>
     </v-row>
     <template v-if="data.Amazon && !isLoading">
-      <Products title="Amazon" :products="data.Amazon"></Products>
-
+      <Products title="Myntra" :products="data.Myntra"></Products>
       <Products title="Flipkart" :products="data.Flipkart"></Products>
 
-      <Products title="Myntra" :products="data.Myntra"></Products>
+      <Products title="Amazon" :products="data.Amazon"></Products>
     </template>
   </div>
 </template>
